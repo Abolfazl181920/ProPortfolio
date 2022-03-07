@@ -7,9 +7,9 @@ import MotionWrap from '../../wrapper/MotionWrapper';
 import './Footer.scss';
 
 const Footer = () => {
-    const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-    const [isFormSubmitted, setIsFormSubmitted] = useState(false);
-    const [loading, setLoading] = useState(false);
+    const [ formData, setFormData ] = useState({ name: '', email: '', message: '' });
+    const [ isFormSubmitted, setIsFormSubmitted ] = useState(false);
+    const [ loading, setLoading ] = useState(false);
   
     const { username, email, message } = formData;
   
@@ -43,11 +43,11 @@ const Footer = () => {
         <div className="app__footer-cards">
           <div className="app__footer-card ">
             <img src={images.email} alt="email" />
-            <a href="mailto:hello@micael.com" className="p-text">hello@micael.com</a>
+            <a href="mailto:abolfazl.moradi.me@gmail.com" className="p-text">abolfazl.moradi.me@gmail.com</a>
           </div>
           <div className="app__footer-card">
             <img src={images.mobile} alt="phone" />
-            <a href="tel:+1 (123) 456-7890" className="p-text">+1 (123) 456-7890</a>
+            <a href="tel:+1 (123) 456-7890" className="p-text">+98 9196345698</a>
           </div>
         </div>
         {!isFormSubmitted ? (
