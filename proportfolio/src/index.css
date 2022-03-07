@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap');
 
 :root {
-  --font-base: "DM Sans", sans-serif;
+  --font-base: 'Fredoka', sans-serif;
 
   --primary-color: #edf2f8;
   --secondary-color: #313bac;
