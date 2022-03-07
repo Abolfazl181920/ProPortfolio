@@ -15,7 +15,7 @@ const Footer = () => {
   
     const handleChangeInput = (e) => {
       const { name, value } = e.target;
-      setFormData({ ...formData, [name]: value });
+      setFormData({ ...formData, [ name ]: value });
     };
   
     const handleSubmit = () => {
@@ -51,24 +51,26 @@ const Footer = () => {
           </div>
         </div>
         {!isFormSubmitted ? (
-          <div className="app__footer-form app__flex">
-            <div className="app__flex">
-              <input className="p-text" type="text" placeholder="Your Name" name="username" value={username} onChange={handleChangeInput} />
+          <form action="https://formspree.io/f/xnqwvlln" method="post">
+            <div className="app__footer-form app__flex">
+              <div className="app__flex">
+                <input className="p-text" type="text" placeholder="Your Name" name="username" value={username} onChange={handleChangeInput} />
+              </div>
+              <div className="app__flex">
+                <input className="p-text" type="email" placeholder="Your Email" name="email" value={email} onChange={handleChangeInput} />
+              </div>
+              <div>
+                <textarea
+                  className="p-text"
+                  placeholder="Your Message"
+                  value={message}
+                  name="message"
+                  onChange={handleChangeInput}
+                />
+              </div>
+              <button type="button" className="p-text" onClick={handleSubmit}>{!loading ? 'Send Message' : 'Sending...'}</button>
             </div>
-            <div className="app__flex">
-              <input className="p-text" type="email" placeholder="Your Email" name="email" value={email} onChange={handleChangeInput} />
-            </div>
-            <div>
-              <textarea
-                className="p-text"
-                placeholder="Your Message"
-                value={message}
-                name="message"
-                onChange={handleChangeInput}
-              />
-            </div>
-            <button type="button" className="p-text" onClick={handleSubmit}>{!loading ? 'Send Message' : 'Sending...'}</button>
-          </div>
+          </form>
         ) : (
           <div>
             <h3 className="head-text">
