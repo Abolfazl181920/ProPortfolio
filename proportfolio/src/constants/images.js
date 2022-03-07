@@ -24,9 +24,8 @@ import about03 from '../assests/about03.png';
 import about04 from '../assests/about04.png';
 
 import profile from '../assests/profile.png';
-// import profile2 from '../assests/profile2.png';
 import circle from '../assests/circle.svg';
-import logo from '../assests/logo.png';
+import logo from '../assests/logo.jpg';
 
 import adidas from '../assests/adidas.png';
 import amazon from '../assests/amazon.png';
@@ -61,7 +60,6 @@ export default {
   about03,
   about04,
   profile,
-  // profile2,
   circle,
   logo,
   adidas,
