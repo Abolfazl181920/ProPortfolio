@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import { images } from '../../constants';
 import { client } from '../../client';
 import AppWrapper from '../../wrapper/AppWrapper';
-import MotionWrap from '../../wrapper/MotionWrapper';
 import './Footer.scss';
+import MotionWrap from '../../wrapper/MotionWrapper';
 
 const Footer = () => {
     const [ formData, setFormData ] = useState({ name: '', email: '', message: '' });
@@ -51,25 +51,25 @@ const Footer = () => {
           </div>
         </div>
         {!isFormSubmitted ? (
-          <form action="https://formspree.io/f/xnqwvlln" method="post">
-            <div className="app__footer-form app__flex">
-              <div className="app__flex">
-                <input className="p-text" type="text" placeholder="Your Name" name="username" value={username} onChange={handleChangeInput} />
-              </div>
-              <div className="app__flex">
-                <input className="p-text" type="email" placeholder="Your Email" name="email" value={email} onChange={handleChangeInput} />
-              </div>
-              <div>
-                <textarea
-                  className="p-text"
-                  placeholder="Your Message"
-                  value={message}
-                  name="message"
-                  onChange={handleChangeInput}
-                />
-              </div>
-              <button type="button" className="p-text" onClick={handleSubmit}>{!loading ? 'Send Message' : 'Sending...'}</button>
-            </div>
+          <form
+            action="https://formspree.io/f/xnqwvlln"
+            method="POST"
+          >
+            <label>
+              Your email:
+              <input
+                className="p-text"
+                type="email"
+                placeholder="abolfazl.moradi.me@gmail.com"
+                name="email"
+              />
+            </label>
+              <br />
+            <label>
+              Your message:
+              <textarea name="message"></textarea>
+            </label>
+            <button type="submit">Send</button>
           </form>
         ) : (
           <div>
@@ -86,4 +86,4 @@ const Footer = () => {
     MotionWrap(Footer, 'app__footer'),
     'contact',
     'app__whitebg',
-  );  
+  );
