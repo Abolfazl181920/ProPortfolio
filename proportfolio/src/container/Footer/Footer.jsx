@@ -55,21 +55,11 @@ const Footer = () => {
             action="https://formspree.io/f/xnqwvlln"
             method="POST"
           >
-            <label>
-              Your email:
-              <input
-                className="p-text"
-                type="email"
-                placeholder="abolfazl.moradi.me@gmail.com"
-                name="email"
-              />
-            </label>
-              <br />
-            <label>
+            <label htmlFor="message">
               Your message:
-              <textarea name="message"></textarea>
             </label>
-            <button type="submit">Send</button>
+            <textarea className="textarea" name="message"></textarea>
+            <button className="form__button" type="submit">Send</button>
           </form>
         ) : (
           <div>
