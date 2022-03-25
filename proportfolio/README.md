@@ -1,3 +1,8 @@
+# project looks like below
+
+![Alt text](relative/path/to/img.jpg?raw=true "Title")
+
+
 ### `npm start`
 
 Runs the app in the development mode.\
