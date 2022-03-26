@@ -35,7 +35,7 @@ import nb from '../assests/nb.png';
 import skype from '../assests/skype.png';
 import spotify from '../assests/spotify.png';
 
-export default {
+const images = {
   email,
   mobile,
   api,
@@ -68,5 +68,7 @@ export default {
   bolt,
   nb,
   skype,
-  spotify,
-};
+  spotify
+}
+
+export default images;
